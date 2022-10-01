@@ -1,0 +1,125 @@
+<!----header-area -->
+<header>
+    <div class="header-top-area"  [ngClass]="{'header-top-invisible':headerTop == false}">
+        <div class="container">
+            <div class="header-top-main">
+                <div class="header-discount">
+                    <div>
+                        <h3>20% Discount All New Customers</h3>
+                    </div>
+                    <div>
+                        <button>Get Register</button>
+                    </div>
+                </div>
+                <div class="header-top-close">
+                    <span (click)="closeHeaderTop()"><i class="fa fa-xmark"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-midle" [ngClass]="{'header-fixed': headerFixed == true}">
+        <div class="container">
+        
+            <div class="header-midle-main">
+                <div class="header-logo">
+                   <a routerLink="/"><img src="./assets/images/logo/logo.png" alt=""></a>
+                </div>
+                <!---join-->
+                <div class="join">
+                    <div>
+                        <img src="./assets/images/png/user.png" alt="">
+                    </div>
+                    <div>
+                        <a href="#">Join</a>
+                    </div>
+                </div>
+
+                <!---search-->
+                <div class="search-area">
+                    <div class="search-main">
+                        <div class="search-input">
+                            <input type="text" value="" placeholder="Search Anything...">
+                        </div>
+                        <div class="search-btn">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!---icon-menu-->
+                <div class="header-midle-right">
+                    <div class="icon-menu">
+                        <ul>
+                            <li><a href="#"><i class="fa-solid fa-shuffle"></i> <span>0</span></a></li>
+                            <li><a href="#"><i class="fa fa-heart"></i>
+                                <span>0</span>
+                            </a></li>
+                            <li><a href="#">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <span>9+</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="total-price">
+                        <span>Total Price</span>
+                        <h3>$346.00</h3>
+                    </div>
+                </div>
+            </div>
+
+               <!---header-midle-res--->
+               <div class="header-midle-res">
+                <div class="header-midle-res-main">
+                    <div class="join">
+                        <div>
+                            <img src="./assets/images/png/user.png" alt="">
+                        </div>
+                    </div>
+                    <div class="header-logo">
+                        <a routerLink="/"><img src="./assets/images/logo/logo.png" alt=""></a>
+                     </div>
+                    <div class="res-search-icon">
+                        <button (click)="resSearchBoxToggle()"><i [class]=" resSearchShow?'fa fa-xmark':'fa fa-search'"></i></button>
+                    </div>
+                </div>
+                 <!---search-->
+                 <div class="search-area" *ngIf="resSearchShow == true">
+                    <div class="search-main">
+                        <div class="search-input">
+                            <input type="text" value="" placeholder="Search Anything...">
+                        </div>
+                        <div class="search-btn">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div><!---res-end-->
+
+
+        </div>
+    </div>
+    <!---header-bottom-->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-bottom-main">
+                <!---header-menu-->
+                <div class="header-menu">
+                    <ul>
+                        <li><a href="#">Home <i class="fa fa-angle-down"></i></a></li>
+                        <li><a href="#">Shop <i class="fa fa-angle-down"></i></a></li>
+                        <li><a href="#">Pages <i class="fa fa-angle-down"></i></a></li>
+                        <li><a href="#">Authentic <i class="fa fa-angle-down"></i></a></li>
+                        <li><a href="#">Blogs <i class="fa fa-angle-down"></i></a></li>
+                        <li><a href="#">Need Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="header-len">
+                    <ul>
+                        <li><i class="fa fa-flag"></i> <span>English <i class="fa fa-angle-down"></i></span></li>
+                        <li><i class="fas fa-funnel-dollar"></i> <span>Doller <i class="fa fa-angle-down"></i></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
