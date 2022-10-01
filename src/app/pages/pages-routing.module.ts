@@ -2,6 +2,7 @@ import { PagesComponent } from './pages.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path:"",
@@ -9,12 +10,12 @@ const routes: Routes = [
     children:[
       {
         path:'',
-        redirectTo:"home",
+        redirectTo:"super-admin",
         pathMatch:"full"
       },
       // {
-      //   path:"home",
-      //   loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+      //   path:"super-admin",
+      //   loadChildren: () => import('./super-admin/super-admin-components/sp-admin/sp-admin.module').then(m => m.SpAdminModule)
       // },
 
     ]
