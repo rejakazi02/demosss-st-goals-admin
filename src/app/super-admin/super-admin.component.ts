@@ -52,8 +52,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
             name: 'Kubernetes',
             isExpanded: true,
             children: [
-              { name: 'Containerization', url: 'containerization' },
-              { name: 'Kubernetes', url: 'kubernetes' },
+              { name: 'Containerization', url: 'admin' },
+              { name: 'Kubernetes', url: 'admin' },
               // { name: 'Node', url: 'node' },
               // { name: 'Cluster', url: 'cluster' },
             ],
@@ -136,7 +136,7 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
       {
         name: 'Support',
         isExpanded: true,
-        children: [{ name: 'Contacts', url: 'contact' }],
+        children: [{ name: 'Contacts', url: '/students' }],
       },
       {
         name: 'F.A.Q',

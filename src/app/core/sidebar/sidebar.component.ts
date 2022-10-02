@@ -135,7 +135,7 @@ export class SidebarComponent implements OnInit,AfterViewInit {
       {
         name: 'Support',
         isExpanded: true,
-        children: [{name: 'Contacts', url: 'contact'},],
+        children: [{name: 'Contacts', url: '/students'},],
       },
       {
         name: 'F.A.Q',
@@ -154,7 +154,7 @@ export class SidebarComponent implements OnInit,AfterViewInit {
     ];
 
 
-    
+
     this.dataSource.data = this.navItems;
   }
   ngAfterViewInit() {

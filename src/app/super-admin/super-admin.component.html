@@ -2,7 +2,7 @@
   <mat-drawer mode="side" opened class="side-nav-div">
     <!-- side nav  -->
     <div class="sidePanel transition ease-in-out md:ml-8 2xl:ml-[35%] sticky top-2">
-      
+
       <img src="../../assets/images/logo/291774973_2016748331843445_5453002926365219016_n 1.png" alt="">
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="kcci-mat-tree">
         <mat-tree-node *matTreeNodeDef="let node" matRipple matTreeNodePadding matTreeNodePaddingIndent="10">
@@ -37,5 +37,7 @@
 
 
 
-  <mat-drawer-content>Main content</mat-drawer-content>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
 </mat-drawer-container>
