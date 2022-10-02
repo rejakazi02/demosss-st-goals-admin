@@ -1,14 +1,16 @@
 
 .example-spacer {
   flex: 1 1 auto;
-  background-color: rgb(24, 6, 187);
+  // background-color: rgb(24, 6, 187);
+  background-color: rgb(245, 226, 226);
   padding: 0;
   a {
+    border-right: 1px solid black;
     img {
       height: 70px;
       object-fit: fill;
       overflow: hidden;
-      width: 270px;
+      width: 269px;
     }
   }
 }
