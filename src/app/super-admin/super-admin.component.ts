@@ -5,7 +5,7 @@ import {
   MatTreeFlattener,
 } from '@angular/material/tree';
 // import { NavItem, NavItemNode } from './SideNav';
-import { NavItem, NavItemNode } from '../core/sidebar/sidenav';
+import { NavItem, NavItemNode } from './sAdminNav';
 
 @Component({
   selector: 'app-super-admin',

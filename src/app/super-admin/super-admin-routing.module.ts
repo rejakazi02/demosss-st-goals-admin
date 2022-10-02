@@ -8,7 +8,7 @@ const routes: Routes = [
     children:[
       {
         path:'',
-        redirectTo:"super-admin",
+        redirectTo:"dashboard",
         pathMatch:"full"
       },
       {
