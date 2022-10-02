@@ -1,16 +1,27 @@
+
+
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 // import { NavItem, NavItemNode } from './SideNav';
-import { NavItem, NavItemNode } from '../core/sidebar/sidenav';
+import { NavItem, NavItemNode } from './sidenav';
+
 
 @Component({
-  selector: 'app-super-admin',
-  templateUrl: './super-admin.component.html',
-  styleUrls: ['./super-admin.component.scss'],
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss']
 })
+// export class SidebarComponent implements OnInit {
 
-export class SuperAdminComponent implements OnInit, AfterViewInit {
+//   constructor() { }
+
+//   ngOnInit(): void {
+//   }
+
+// }
+
+export class SidebarComponent implements OnInit,AfterViewInit {
   @ViewChild('tree') tree: any;
   navItems: NavItem[] = [];
   // Cloud Provider
@@ -77,33 +88,24 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
         name: 'DevOps Platform',
         isExpanded: true,
         children: [
-          { name: 'Getting Started', url: 'getting-started' },
-          { name: 'Application Creation', url: 'application-creation' },
+
+          {name: 'Getting Started', url: 'getting-started'},
+          {name: 'Application Creation', url: 'application-creation'},
           {
             name: 'Existing Application On-boarding',
             url: 'existing-application',
           },
-          {
-            name: 'Advance Settings',
-            isExpanded: true,
-            url: 'application-creation',
+          {name: 'Advance Settings', isExpanded: true,  url: 'application-creation',
             children: [
               { name: 'Build Arguments', url: 'build-arguments' },
               { name: 'Environments', url: 'environments' },
               { name: 'Secrets', url: 'secrets' },
               { name: 'Application Resources', url: 'application-resources' },
               { name: 'Terminal', url: 'terminal' },
-              {
-                name: 'Application Configurations',
-                url: 'application-configurations',
-              },
-              {
-                name: 'Pipeline Configurations',
-                url: 'pipeline-configurations',
-              },
+              { name: 'Application Configurations', url: 'application-configurations' },
+              { name: 'Pipeline Configurations', url: 'pipeline-configurations' },
               { name: 'External Endpoints ', url: 'external-endpoints' },
-            ],
-          },
+            ],},
         ],
       },
       {
@@ -113,22 +115,19 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
           {
             name: 'AWS',
             isExpanded: true,
-            children: [
-              { name: 'Provider Configuration', url: 'provider-aws' },
-              { name: 'Cluster Creation', url: 'create-cluster-aws' },
-            ],
+            children: [{name: 'Provider Configuration', url: 'provider-aws'},
+              {name: 'Cluster Creation', url: 'create-cluster-aws'},],
           },
           {
             name: 'DIGITAL OCEAN',
             isExpanded: true,
-            children: [
-              { name: 'Coming Soon...', url: 'provider-digital-ocean' },
+            children: [{name: 'Coming Soon...', url: 'provider-digital-ocean'},
             ],
           },
           {
             name: 'GCP',
             isExpanded: true,
-            children: [{ name: 'Coming Soon...', url: 'gcp' }],
+            children: [{name: 'Coming Soon...', url: 'gcp'}],
           },
         ],
       },
@@ -136,7 +135,7 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
       {
         name: 'Support',
         isExpanded: true,
-        children: [{ name: 'Contacts', url: 'contact' }],
+        children: [{name: 'Contacts', url: 'contact'},],
       },
       {
         name: 'F.A.Q',
@@ -154,6 +153,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
       },
     ];
 
+
+    
     this.dataSource.data = this.navItems;
   }
   ngAfterViewInit() {

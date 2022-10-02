@@ -9,13 +9,17 @@ const routes: Routes = [
     children:[
       {
         path:'',
-        redirectTo:"admin",
+        redirectTo:"super-admin",
         pathMatch:"full"
       },
       {
         path:"admin",
         loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
       },
+      {
+        path:"super-admin",
+        loadChildren: () => import('./super-admin/super-admin.module').then(m => m.SuperAdminModule)
+      }
 
     ]
   }

@@ -12,6 +12,9 @@ import { StudentsComponent } from './students/students.component';
 import { TeachersComponent } from './teachers/teachers.component';
 import { SuperAdminComponent } from './super-admin/super-admin.component';
 import { ParentsComponent } from './parents/parents.component';
+import { SidebarComponent } from './core/sidebar/sidebar.component';
+import {MatTreeModule} from '@angular/material/tree';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,15 +24,20 @@ import { ParentsComponent } from './parents/parents.component';
     TeachersComponent,
     SuperAdminComponent,
     ParentsComponent,
+    SidebarComponent,
+
 
   ],
   imports: [
-    BrowserModule,
+ 
+  BrowserModule,
     AppRoutingModule,
     SwiperModule,
     BrowserAnimationsModule,
     SlickCarouselModule,
-    MaterialModule
+    MaterialModule,
+    MatTreeModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
