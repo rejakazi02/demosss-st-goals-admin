@@ -4,7 +4,7 @@ import { FlatTreeControl } from '@angular/cdk/tree';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 // import { NavItem, NavItemNode } from './SideNav';
-import { NavItem, NavItemNode } from './sidenav';
+import { NavItem, NavItemNode } from './SideNav';
 
 
 @Component({
