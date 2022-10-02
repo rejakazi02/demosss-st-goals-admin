@@ -1,9 +1,9 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened class="side-nav-div">
     <!-- side nav  -->
-    <div class="sidePanel transition ease-in-out md:ml-8 2xl:ml-[35%] sticky top-2">
+    <div class="sidePanel-main-div">
+<a href="" routerLink="/super-admin"><img src="../../assets/images/logo/291774973_2016748331843445_5453002926365219016_n 1.png" alt=""></a>
 
-      <img src="../../assets/images/logo/291774973_2016748331843445_5453002926365219016_n 1.png" alt="">
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="kcci-mat-tree">
         <mat-tree-node *matTreeNodeDef="let node" matRipple matTreeNodePadding matTreeNodePaddingIndent="10">
           <a [routerLinkActive]="'active'" [routerLink]="[node.url]" class="dropdown__link flex items-center">
@@ -14,10 +14,10 @@
           </a>
         </mat-tree-node>
         <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matRipple matTreeNodePadding
-          matTreeNodePaddingIndent="10">
+          matTreeNodePaddingIndent="10" class="mat-tree-note">
           <button [attr.aria-label]="'Toggle ' + node.name" [class.showed]="treeControl.isExpanded(node)"
-            class="sidenav__link flex justify-between items-center" matTreeNodeToggle>
-            <div class="flex items-center">
+            class="" matTreeNodeToggle>
+            <div class="flex">
               <mat-icon *ngIf="node.icon" class="node-icon">{{
                 node.icon
               }}</mat-icon>
@@ -38,6 +38,13 @@
 
 
   <mat-drawer-content>
+<div>
+  <!-- <app-header></app-header> -->
+  <!-- <app-footer></app-footer> -->
+</div>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
+
+
+

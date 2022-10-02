@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router:Router,
-    private carousel:CarouselCntrlService 
+    private carousel:CarouselCntrlService
   ) { }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     this.headerTop = false;
   }
   /***
-   * Responsive search bar toggle 
+   * Responsive search bar toggle
    */
   resSearchBoxToggle(){
     this.resSearchShow =! this.resSearchShow;
@@ -56,7 +56,7 @@ export class HeaderComponent implements OnInit {
       }
       window.scrollBy(0,0);
     })
-   
+
   }/** End */
 
 }

@@ -4,7 +4,19 @@ import { SuperAdminComponent } from './super-admin.component';
 const routes: Routes = [
   {
     path:"",
-    component:SuperAdminComponent
+    component:SuperAdminComponent,
+    children:[
+      {
+        path:'',
+        redirectTo:"",
+        pathMatch:"full"
+      },
+      {
+        path:"add-admin",
+        loadChildren: () => import('./add-admin/add-admin.module').then(m => m.AddAdminModule)
+      },
+
+    ]
   }
 ];
 
