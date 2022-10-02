@@ -1,8 +1,16 @@
+
+  <mat-toolbar class="example-spacer">
+    <a href="" routerLink="/super-admin"><img src="../../assets/images/logo/291774973_2016748331843445_5453002926365219016_n 1.png" alt=""></a>
+
+  </mat-toolbar>
+
+
+
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened class="side-nav-div">
     <!-- side nav  -->
     <div class="sidePanel-main-div">
-<a href="" routerLink="/super-admin"><img src="../../assets/images/logo/291774973_2016748331843445_5453002926365219016_n 1.png" alt=""></a>
+      <!-- <a href="" routerLink="/super-admin"><img src="../../assets/images/logo/291774973_2016748331843445_5453002926365219016_n 1.png" alt=""></a> -->
 
       <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="kcci-mat-tree">
         <mat-tree-node *matTreeNodeDef="let node" matRipple matTreeNodePadding matTreeNodePaddingIndent="10">
@@ -18,6 +26,7 @@
           <button [attr.aria-label]="'Toggle ' + node.name" [class.showed]="treeControl.isExpanded(node)"
             class="" matTreeNodeToggle>
             <div class="flex">
+              
               <mat-icon *ngIf="node.icon" class="node-icon">{{
                 node.icon
               }}</mat-icon>

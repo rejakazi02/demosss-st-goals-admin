@@ -48,6 +48,7 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
     this.navItems = [
       {
         name: 'Super Admin',
+        icon: "dashboard",
         isExpanded: true,
         children: [
           { name: 'Dashboard', url: 'dashboard' },
@@ -56,7 +57,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
         ],
       },
       {
-        name: 'DevOps Platform',
+        name: 'Students',
+        icon: "wc",
         isExpanded: true,
         children: [
           { name: 'Contacts', url: 'add-admin' },
@@ -64,7 +66,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
         ],
       },
       {
-        name: 'Multi Cluster',
+        name: 'Teacher',
+        icon: "supervised_user_circle",
         isExpanded: true,
         children: [
           { name: 'Contacts', url: 'add-admin' },
@@ -73,7 +76,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
       },
 
       {
-        name: 'Support',
+        name: 'Parents',
+        icon: "group",
         isExpanded: true,
         children: [
           { name: 'Contacts', url: 'add-admin' },
@@ -81,7 +85,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
         ],
       },
       {
-        name: 'F.A.Q.R',
+        name: 'Library',
+        icon: "library_books",
         isExpanded: true,
         children: [
           { name: 'Contacts', url: 'add-admin' },

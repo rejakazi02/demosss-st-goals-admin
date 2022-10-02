@@ -15,6 +15,7 @@ import { ParentsComponent } from './parents/parents.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import {MatTreeModule} from '@angular/material/tree';
 import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
     SlickCarouselModule,
     MaterialModule,
     MatTreeModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

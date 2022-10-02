@@ -57,6 +57,7 @@ export class SidebarComponent implements OnInit,AfterViewInit {
     this.navItems = [
       {
         name: 'Concepts',
+        icon: 'dashboards',
         isExpanded: true,
         children: [
           {
