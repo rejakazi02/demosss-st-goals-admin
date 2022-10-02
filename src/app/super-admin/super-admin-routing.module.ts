@@ -8,12 +8,20 @@ const routes: Routes = [
     children:[
       {
         path:'',
-        redirectTo:"",
+        redirectTo:"super-admin",
         pathMatch:"full"
       },
       {
         path:"add-admin",
         loadChildren: () => import('./add-admin/add-admin.module').then(m => m.AddAdminModule)
+      },
+      {
+        path:"list-admin",
+        loadChildren: () => import('./list-admin/list-admin.module').then(m => m.ListAdminModule)
+      },
+      {
+        path:"dashboard",
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
 
     ]

@@ -47,11 +47,12 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.navItems = [
       {
-        name: 'Concepts',
+        name: 'Super Admin',
         isExpanded: true,
         children: [
-          { name: 'Contacts', url: 'add-admin' },
-          { name: 'Contacts2', url: 'add-admin' },
+          { name: 'Dashboard', url: 'dashboard' },
+          { name: 'List of Admin', url: 'list-admin' },
+          { name: 'Add Admin', url: 'add-admin' },
         ],
       },
       {
