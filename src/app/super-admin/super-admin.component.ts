@@ -52,8 +52,8 @@ export class SuperAdminComponent implements OnInit, AfterViewInit {
         isExpanded: true,
         children: [
           { name: 'Dashboard', url: 'dashboard' },
-          { name: 'List of Admin', url: 'list-admin' },
-          { name: 'Add Admin', url: 'add-admin' },
+          // { name: 'List of Admin', url: 'list-admin' },
+          // { name: 'Add Admin', url: 'add-admin' },
         ],
       },
       {
